@@ -1,0 +1,130 @@
+.authent-main {
+    width: 100%;
+    height: auto;
+}
+.authent-home {
+    width: calc(100% - 48px);
+    height: auto;
+    margin: 0 auto;
+}
+.authent-title {
+    font-size: 24px;
+    color: #121314;
+    margin-bottom: 24px;
+    padding-top: 24px;
+}
+.authent-menu {
+    width: 48%;
+    height: 158px;
+    border: 1px solid #eaedf3;
+    margin-right: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-bottom: 16px;
+    .authent-ul {
+        width: calc(100% - 32px);
+        height: auto;
+        margin: 0 auto;
+        &:hover {
+            .ac-cur;
+        }
+    }
+    .authent-top {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        .top-title {
+            color: #999;
+            font-size: 20px;
+            margin-left: 12px;
+        }
+        .top-right {
+            flex: 1;
+            text-align: right;
+            span {
+                color: #121314;
+                font-size: 12px;
+                margin-left: 5px;
+                display: inline-block;
+            }
+        }
+    }
+    .authent-content {
+        color: #999;
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    .authent-flex {
+        display: inline-block !important;
+    }
+    .authent-bottom {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        .bottom-text {
+            font-size: 14px;
+            color: #121314;
+            margin-left: 4px;
+            a {
+                color: #0f5bf3;
+            }
+        }
+    }
+}
+.bottom-icon {
+    background-color: #f2aa00;
+    border: 0;
+    color: #fff !important;
+    font-size: 8px;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+.ac-cur {
+    .top-title {
+        color: #121314 !important;
+    }
+    .authent-content {
+        color: #121314;
+    }
+}
+.authent-ream {
+    color: #b8b8b8;
+    font-size: 14px;
+}
+.input {
+    width: 263px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #eaedf3;
+    padding-left: 9px;
+    border-radius: 4px;
+    outline: none;
+    &::placeholder {
+        color: #b8b8b8;
+    }
+    &:focus {
+        border: 1px solid #eaedf3 !important;
+    }
+}
+.red {
+    color: red;
+    font-size: 12px;
+}
+.success {
+    background-color: #00ad74;
+    border: 0;
+    color: #fff !important;
+    font-size: 8px;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 50%;
+    font-style: oblique;
+}

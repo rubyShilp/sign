@@ -1,0 +1,50 @@
+.handWritten {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.handWritten-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.handWritten-top {
+  width: 60px;
+  height: 100%;
+}
+.handWritten-centent {
+  width: calc(100% - 120px);
+  height: 100%;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    width: 50px;
+    height: 100%;
+    transform: translate(0, -50%);
+    color: #eee;
+    font-size: 24px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    content: "";
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
+.tips:after {
+  content: " 请在此处签名";
+}
+.handWritten-right {
+  width: 60px;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>矩形</title>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="邮箱1" transform="translate(-272.000000, -94.000000)">
+            <rect fill="#F6F7F8" x="0" y="0" width="1440" height="697"></rect>
+            <rect id="矩形" fill="#FFFFFF" x="232" y="0" width="1208" height="697"></rect>
+            <g id="编组-2" transform="translate(256.000000, 72.000000)">
+                <rect id="矩形" stroke="#EAEDF3" fill="#FFFFFF" x="0" y="0" width="572" height="158"></rect>
+                <g id="编组" transform="translate(16.000000, 16.000000)"></g>
+                <g id="编组-3" transform="translate(16.000000, 22.000000)">
+                    <rect id="矩形" fill="#0F5BF3" x="0" y="0" width="21" height="16"></rect>
+                    <polygon id="矩形" fill="#C8D2E7" points="0 4 10.5 13.5 21 4 21 17 0 17"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
