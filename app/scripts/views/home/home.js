@@ -1,7 +1,7 @@
 export default {
     data() {
         return {
-            userInfo: JSON.parse(sessionStorage.getItem("userInfo")),
+            userInfo: JSON.parse(sessionStorage.getItem("userInfo")) || { meta: { name: "" } },
         };
     },
 };
