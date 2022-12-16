@@ -14,7 +14,7 @@
                 <div class="left-bottom">
                     <div class="bottom">
                         <img src="./image/icon.png" />
-                        <span class="bottom-text">{{ userInfo.meta.name }}</span>
+                        <span class="bottom-text" v-if="userInfo.meta.name">{{ userInfo.meta.name }}</span>
                     </div>
                 </div>
             </div>
