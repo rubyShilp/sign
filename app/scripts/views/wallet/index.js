@@ -6,7 +6,7 @@ export default {
     data() {
         return {
             isVident: false,
-            index: "",
+            selectIndex: -1,
             info: {},
             allAccounts: [], //钱包列表
         };
@@ -32,7 +32,7 @@ export default {
         //选择账户
         selectAccount(item, index) {
             this.info = item;
-            this.index = index;
+            this.selectIndex = index;
             sessionStorage.setItem("userInfo", JSON.stringify(this.info));
         },
         //登录注册
