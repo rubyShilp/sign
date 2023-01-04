@@ -8,7 +8,6 @@ export default {
             email: "",
             errorText: "",
             isVident: false,
-            userList: [],
         };
     },
     mounted() {
@@ -19,7 +18,13 @@ export default {
         async getUser() {
             let res = await authentServer.getUser();
             if (res.code) {
-                this.userList = res.data;
+                this.userInfo.email = res.data.email;
+                this.email = res.data.email;
+                if (this.email) {
+                    this.isEmail = false;
+                } else {
+                    this.isEmail = true;
+                }
             }
         },
         //选择修改邮箱
