@@ -14,6 +14,7 @@
     "axios": "^0.19.2",
     "echarts": "^4.6.0",
     "element-ui": "^2.15.12",
+    "hard-source-webpack-plugin": "^0.13.1",
     "jspdf": "^2.5.1",
     "md5": "^2.2.1",
     "mux.js": "^5.14.1",
