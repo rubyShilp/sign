@@ -8,7 +8,7 @@
                     </div>
                     <div class="contnt-ul">
                         <div class="menu-li cur">Home</div>
-                        <div class="menu-li">Certification</div>
+                        <div class="menu-li" @click="getPath('/home/certification')">Certification</div>
                     </div>
                 </template>
                 <div class="left-bottom">

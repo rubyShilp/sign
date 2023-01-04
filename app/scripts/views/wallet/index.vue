@@ -17,17 +17,22 @@
             <div class="authent-box">
                 <div class="authent-con">
                     <div class="box-flex">
-                        <img src="./image/icon1.svg" />
+                        Account Selection
                         <img src="./image/colse.svg" class="close" @click="close()" />
                     </div>
                     <!-- <div class="box-title">Wallet Disconnection</div>
                     <div class="box-remark">You will not be able to see your e-Signature infos if you choose to disconnect.</div>
                     <div class="box-remark">Are you Confirm to disconnect from this wallet?</div> -->
                     <ul>
-                        <li :class="{ cur: index === index }" v-for="(item, index) of allAccounts" :key="index" @click="selectAccount(item, index)">{{ item.meta.name }}</li>
+                        <li v-for="(item, index) of allAccounts" :key="index" @click="selectAccount(item, index)">
+                            <span class="radio-box" :class="{ isChecked: index === selectIndex }"></span>
+                            {{ item.meta.name }}
+                        </li>
                     </ul>
-                    <div class="btn close-btn" @click="close()">Cancel</div>
-                    <div class="btn submit-btn" @click="login()">confirm Logging</div>
+                    <div class="name-btn">
+                        <div class="btn close-btn" @click="close()">Cancel</div>
+                        <div class="btn submit-btn" @click="login()">confirm Logging</div>
+                    </div>
                 </div>
             </div>
         </div>
