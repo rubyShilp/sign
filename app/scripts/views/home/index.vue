@@ -7,14 +7,17 @@
                         <img src="./../../../images/logo.png" />
                     </div>
                     <div class="contnt-ul">
-                        <div class="menu-li cur">Home</div>
+                        <div class="menu-li cur" @click="getPath('/home/wallet')">Home</div>
                         <div class="menu-li" @click="getPath('/home/certification')">Certification</div>
                     </div>
                 </template>
                 <div class="left-bottom">
-                    <div class="bottom">
+                    <div class="bottom" v-if="userInfo.meta.name">
                         <img src="./image/icon.png" />
                         <span class="bottom-text" v-if="userInfo.meta.name">{{ userInfo.meta.name }}</span>
+                    </div>
+                    <div class="bottom" v-else>
+                        <span class="bottom-text">No wallet data</span>
                     </div>
                 </div>
             </div>
