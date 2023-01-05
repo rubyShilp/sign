@@ -14,7 +14,7 @@
                     </div>
                     <div class="authent-content">The email address is to receive notices when other Sign tasks invites you.</div>
                     <div class="authent-bottom" :class="{ 'authent-flex': isEmail }">
-                        <template v-if="!isEmail">
+                        <template v-if="!isEmail" @click="selectEmail">
                             <div class="bottom-icon" v-if="!email">!</div>
                             <div class="success" v-if="email">√</div>
                             <div class="bottom-text" v-if="email">{{ email }}</div>
@@ -24,8 +24,8 @@
                             </div>
                         </template>
                         <template v-else>
-                            <input type="text" class="input" placeholder="Please enter the email address" v-model="email" @blur="editEmail" />
-                            <div class="red">{{ errorText }}</div>
+                            <input type="text" class="input" :class="{ red_cur: errorText }" placeholder="Please enter the email address" v-model="email" @blur="editEmail" />
+                            <!-- <div class="red">{{ errorText }}</div> -->
                         </template>
                     </div>
                 </div>

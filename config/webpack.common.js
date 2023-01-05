@@ -7,7 +7,7 @@ const autoprefixer = require("autoprefixer");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
     entry: {
-        main: ["babel-polyfill", "./scripts/polyfill.js"],
+        main: ["./scripts/polyfill.js"],
         app: ["./scripts/main.js"],
     },
     context: path.join(process.cwd(), "app"),
