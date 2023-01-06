@@ -5,8 +5,8 @@
                 <div class="flex-left">
                     <div class="wallet-title">Please select your wallet to connect</div>
                     <div class="wallet-remark">Your e-Signature account generation will depend on your wallet connection.</div>
-                    <div class="btn wallet-btn" @click="connectWallet()">polkadot(.js)</div>
-                    <div class="btn wallet-play">polkadot(.js)</div>
+                    <div class="btn wallet-btn" @click="connectWallet()"><img src="./image/icon-3.png" /><span>polkadot(.js)</span></div>
+                    <div class="btn wallet-play"><img src="./image/icon-2.png" /><span>METAMASK</span></div>
                 </div>
                 <div class="flex-right">
                     <img src="./../../../images/Online-bro.svg" />
@@ -31,7 +31,7 @@
                     </ul>
                     <div class="name-btn">
                         <div class="btn close-btn" @click="close()">Cancel</div>
-                        <div class="btn submit-btn" @click="login()">confirm Logging</div>
+                        <div class="btn submit-btn" @click="login()">Confirm</div>
                     </div>
                 </div>
             </div>

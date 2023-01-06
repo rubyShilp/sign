@@ -27,11 +27,11 @@ const loginRouter = [
         component: () => import("./../views/main/index.vue"),
         meta: { scrollToTop: true },
     },
-    {
-        path: "/home1",
-        component: () => import("./../views/home1/home.vue"),
-        meta: { scrollToTop: true },
-    },
+    // {
+    //     path: "/home1",
+    //     component: () => import("./../views/home1/home.vue"),
+    //     meta: { scrollToTop: true },
+    // },
     {
         path: "/home",
         component: () => import("./../views/home/index.vue"),
@@ -69,16 +69,16 @@ const loginRouter = [
             },
         ],
     },
-    {
-        path: "/handWritten",
-        component: () => import("./../views/signature/signature.vue"),
-        meta: { scrollToTop: true },
-    },
-    {
-        path: "/sign",
-        component: () => import("./../views/sign/sign.vue"),
-        meta: { scrollToTop: true },
-    },
+    // {
+    //     path: "/handWritten",
+    //     component: () => import("./../views/signature/signature.vue"),
+    //     meta: { scrollToTop: true },
+    // },
+    // {
+    //     path: "/sign",
+    //     component: () => import("./../views/sign/sign.vue"),
+    //     meta: { scrollToTop: true },
+    // },
 ];
 const routes = [...loginRouter];
 // 创建router实例

@@ -7,8 +7,8 @@
                         <img src="./../../../images/logo.png" />
                     </div>
                     <div class="contnt-ul">
-                        <div class="menu-li cur" @click="getPath('/home/wallet')">Home</div>
-                        <div class="menu-li" @click="getPath('/home/certification')">Certification</div>
+                        <div class="menu-li cur" @click="getPath('', 1)">Home</div>
+                        <div class="menu-li" @click="getPath('/home/certification', 2)">Certification</div>
                     </div>
                 </template>
                 <div class="left-bottom">

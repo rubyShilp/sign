@@ -3,7 +3,7 @@ import * as authentServer from "./authentication.server";
 export default {
     data() {
         return {
-            userInfo: JSON.parse(sessionStorage.getItem("userInfo")),
+            userInfo: JSON.parse(sessionStorage.getItem("userInfo")) || { meta: { name: "" } },
             isEmail: false,
             email: "",
             errorText: "",
@@ -11,15 +11,18 @@ export default {
         };
     },
     mounted() {
-        this.getUser();
+        if (this.userInfo.meta.name) {
+            this.getUser();
+        }
     },
     methods: {
         /**  */
         async getUser() {
-            let res = await authentServer.getUser();
+            let res = await authentServer.getUser({ token: this.userInfo.address });
             if (res.code) {
                 this.userInfo.email = res.data.email;
                 this.email = res.data.email;
+                sessionStorage.setItem("userInfo", JSON.stringify(res.data));
                 if (this.email) {
                     this.isEmail = false;
                 } else {

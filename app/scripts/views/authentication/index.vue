@@ -14,10 +14,10 @@
                     </div>
                     <div class="authent-content">The email address is to receive notices when other Sign tasks invites you.</div>
                     <div class="authent-bottom" :class="{ 'authent-flex': isEmail }">
-                        <template v-if="!isEmail" @click="selectEmail">
+                        <template v-if="!isEmail">
                             <div class="bottom-icon" v-if="!email">!</div>
                             <div class="success" v-if="email">√</div>
-                            <div class="bottom-text" v-if="email">{{ email }}</div>
+                            <div class="bottom-text" v-if="email" @click="selectEmail">{{ email }}</div>
                             <div class="bottom-text" v-if="!email">
                                 Not set,
                                 <a href="javascript:;" @click="selectEmail"> Click here to set </a>
