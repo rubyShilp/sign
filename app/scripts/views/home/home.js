@@ -33,20 +33,24 @@ export default {
         },
         //解绑
         async login() {
-            let users = JSON.parse(sessionStorage.getItem("users"));
-            if (users.id) {
-                let params = {
-                    token: token(),
-                    email: "",
-                    id: users.id,
-                };
-                let res = await homeServer.getUnbinding(params);
-                if (res.code == 200) {
-                    this.close();
-                    sessionStorage.setItem("userInfo", null);
-                    this.$router.push("/home/wallet");
-                }
-            }
+            this.close();
+            sessionStorage.setItem("TOKEN", null);
+            sessionStorage.setItem("userInfo", null);
+            this.$router.push("/home/wallet");
+            // let users = JSON.parse(sessionStorage.getItem("users"));
+            // if (users.id) {
+            //     let params = {
+            //         token: token(),
+            //         email: "",
+            //         id: users.id,
+            //     };
+            //     let res = await homeServer.getUnbinding(params);
+            //     if (res.code == 200) {
+            //         this.close();
+            //         sessionStorage.setItem("userInfo", null);
+            //         this.$router.push("/home/wallet");
+            //     }
+            // }
         },
         //复制链接
         initClipboardData() {

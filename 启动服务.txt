@@ -1,0 +1,5 @@
+ssh root@8.219.214.239 -p 56011
+密码：Rdis2fun
+cd /root/signweb/sign
+git pull
+podman restart signui_nginx
