@@ -66,6 +66,7 @@
         margin: 0 auto;
         margin-top: 160px;
         border-radius: 8px;
+        position: relative;
     }
     .authent-con {
         width: calc(100% - 48px);
@@ -76,7 +77,8 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: auto;
+            height: 100px;
+            overflow-y: auto;
             li {
                 list-style-type: none;
                 height: 40px;
@@ -129,9 +131,12 @@
     }
 }
 .name-btn {
-    width: 100%;
+    width: calc(100% - 48px);
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    position: absolute;
+    bottom: 0px;
 }
 .radio-box {
     display: inline-block;

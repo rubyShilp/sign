@@ -33,6 +33,7 @@ export default {
         selectAccount(item, index) {
             this.info = item;
             this.selectIndex = index;
+            sessionStorage.setItem("TOKEN", this.info.address);
             sessionStorage.setItem("userInfo", JSON.stringify(this.info));
         },
         //登录注册

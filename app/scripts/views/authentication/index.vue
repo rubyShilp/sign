@@ -7,7 +7,7 @@
                     <div class="authent-top">
                         <img src="./../../../images/email.svg" />
                         <span class="top-title">My email</span>
-                        <div class="top-right" v-if="isEmail">
+                        <div class="top-right" v-if="isEmail && !email">
                             <span class="bottom-icon">!</span>
                             <span @click="selectEmail"> Not set</span>
                         </div>

@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunk"]=self["webpackChunk"]||[]).push([[22],{7022:(s,e,p)=>{s.exports=p.p+"images/colse.svg"}}]);

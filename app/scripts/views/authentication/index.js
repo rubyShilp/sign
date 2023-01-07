@@ -8,31 +8,31 @@ export default {
             email: "",
             errorText: "",
             isVident: false,
+            users: {}, //个人信息
         };
     },
     mounted() {
-        if (this.userInfo.meta.name) {
-            this.getUser();
-        }
+        this.getUser();
     },
     methods: {
         /**  */
         async getUser() {
             let res = await authentServer.getUser({ token: this.userInfo.address });
             if (res.code) {
-                this.userInfo.email = res.data.email;
-                this.email = res.data.email;
-                sessionStorage.setItem("userInfo", JSON.stringify(res.data));
-                if (this.email) {
-                    this.isEmail = false;
-                } else {
-                    this.isEmail = true;
+                this.users = res.data;
+                sessionStorage.setItem("users", JSON.stringify(this.users));
+                if (res.data.email) {
+                    this.email = res.data.email;
+                    if (this.email) {
+                        this.isEmail = false;
+                    } else {
+                        this.isEmail = true;
+                    }
                 }
             }
         },
         //选择修改邮箱
         selectEmail() {
-            this.email = "";
             this.errorText = "";
             this.isEmail = !this.isEmail;
         },
@@ -49,6 +49,7 @@ export default {
             let params = {
                 token: this.userInfo.address,
                 email: this.email,
+                id: this.users.id,
             };
             let res = await authentServer.getemilBand(params);
             if (res.code == 200) {
