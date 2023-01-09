@@ -7,6 +7,7 @@ export default {
             isVident: false,
             isCopy: false,
             userInfo: JSON.parse(sessionStorage.getItem("userInfo")) || { meta: { name: "" } },
+            curIndex: 1,
         };
     },
     watch: {
@@ -17,6 +18,7 @@ export default {
     methods: {
         //跳转页面
         getPath(url, type) {
+            this.curIndex = type;
             if (type == 1) {
                 if (this.userInfo.meta.name) {
                     this.$router.push("/home/authent");

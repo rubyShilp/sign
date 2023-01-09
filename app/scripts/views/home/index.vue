@@ -7,8 +7,16 @@
                         <img src="./../../../images/logo.png" />
                     </div>
                     <div class="contnt-ul">
-                        <div class="menu-li cur" @click="getPath('', 1)">Home</div>
-                        <div class="menu-li" v-if="userInfo && userInfo.address" @click="getPath('/home/certification', 2)">Certification</div>
+                        <div class="menu-li" :class="{ cur: curIndex == 1 }" @click="getPath('', 1)">
+                            <img v-if="curIndex == 1" src="./image/home.svg" />
+                            <img v-else src="./image/home-hover.svg" />
+                            Home
+                        </div>
+                        <div class="menu-li" :class="{ cur: curIndex == 2 }" v-if="userInfo && userInfo.address" @click="getPath('/home/certification', 2)">
+                            <img v-if="curIndex == 2" src="./image/rezhen.svg" />
+                            <img v-else src="./image/rezhen-hove.svg" />
+                            Certification
+                        </div>
                     </div>
                 </template>
                 <div class="left-bottom">
