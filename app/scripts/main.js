@@ -4,6 +4,7 @@ import router from "./routers/router";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import "./filter/filter";
+import "./directive/core.js";
 Vue.use(ElementUI);
 new Vue({
     router: router,

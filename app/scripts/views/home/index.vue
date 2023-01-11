@@ -23,14 +23,17 @@
                     <div class="bottom" v-if="userInfo.meta.name">
                         <div class="btn-flex marign-btn">
                             <img src="./image/icon.png" />
-                            <span class="bottom-text" v-if="userInfo.meta.name">{{ userInfo.meta.name }}</span>
+                            <span class="span-w bottom-text" v-if="userInfo.meta.name">{{ userInfo.meta.name }}</span>
                             <img class="jie-icon showHider" @click="isVident = true" src="./image/jiebang.svg" />
                         </div>
                         <div class="btn-flex">
                             <input v-model="userInfo.address" type="hidden" id="bar" />
-                            <span class="bottom-text span_so">{{ userInfo.address }}</span>
-                            <i v-if="isCopy" class="el-icon-copy-document" id="eqbtn" data-clipboard-action="copy" data-clipboard-target="#bar" @click="initClipboardData()"></i>
-                            <img v-if="!isCopy" class="jie-icon" id="eqbtn" data-clipboard-action="copy" data-clipboard-target="#bar" @click="initClipboardData()" src="./image/fuzhi.svg" />
+                            <span class="span-w bottom-text span_so">{{ userInfo.address }}</span>
+                            <!-- <i v-if="isCopy" class="el-icon-copy-document" id="eqbtn" data-clipboard-action="copy" data-clipboard-target="#bar" @click="initClipboardData()"></i> -->
+                            <el-popover placement="top-start" trigger="hover" popper-class="message-popover">
+                                <span>{{ copyRemark }}</span>
+                                <img slot="reference" class="jie-icon" id="eqbtn" data-clipboard-action="copy" data-clipboard-target="#bar" @click="initClipboardData()" src="./image/fuzhi.svg" />
+                            </el-popover>
                         </div>
                     </div>
                     <div class="bottom user-no" v-else>
@@ -54,7 +57,7 @@
                     <div class="box-remark">Are you Confirm to disconnect from this wallet?</div>
                     <div class="name-btn">
                         <div class="btn close-btn" @click="close()">Cancel</div>
-                        <div class="btn submit-btn" @click="login()">confirm Logging out</div>
+                        <div class="btn submit-btn" @click="login()">Confirm</div>
                     </div>
                 </div>
             </div>

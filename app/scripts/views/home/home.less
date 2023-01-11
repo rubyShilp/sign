@@ -6,14 +6,14 @@
 .home-left {
     width: 240px;
     min-height: 700px;
-    height: auto;
+    height: 100vh;
     display: inline-block;
     vertical-align: top;
     background-color: #f6f7f8;
     .left-content {
         width: calc(100% - 32px);
         min-height: 700px;
-        height: auto;
+        height: 100%;
         margin: 0 auto;
         position: relative;
         .left-bottom {
@@ -174,7 +174,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    span {
+    .span-w {
         display: inline-block;
         text-align: left;
         width: 100%;
@@ -217,4 +217,7 @@
 .span-login-no {
     color: #121314;
     font-size: 12px;
+}
+/deep/ .el-popover {
+    min-width: 10px !important;
 }

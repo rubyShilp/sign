@@ -24,7 +24,7 @@
                             </div>
                         </template>
                         <template v-else>
-                            <input type="text" class="input" :class="{ red_cur: errorText }" placeholder="Please enter the email address" v-model="email" @blur="editEmail" />
+                            <input type="text" v-focus="isEmail" class="input" :class="{ red_cur: errorText }" placeholder="Please enter the email address" v-model="email" @blur="editEmail" />
                             <!-- <div class="red">{{ errorText }}</div> -->
                         </template>
                     </div>
