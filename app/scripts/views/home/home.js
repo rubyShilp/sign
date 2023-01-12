@@ -60,14 +60,17 @@ export default {
             const clipboard = new Clipboard("#eqbtn");
             clipboard.on("success", (e) => {
                 this.isCopy = true;
-                this.copyRemark = "复制成功";
+                this.copyRemark = "Copied";
                 clipboard.destroy();
             });
             clipboard.on("error", (e) => {
                 clipboard.destroy();
-                this.copyRemark = "复制失败";
+                this.copyRemark = "Failure";
                 this.isCopy = false;
             });
+            setTimeout(() => {
+                this.copyRemark = "";
+            }, 2000);
         },
     },
 };

@@ -30,10 +30,12 @@
                             <input v-model="userInfo.address" type="hidden" id="bar" />
                             <span class="span-w bottom-text span_so">{{ userInfo.address }}</span>
                             <!-- <i v-if="isCopy" class="el-icon-copy-document" id="eqbtn" data-clipboard-action="copy" data-clipboard-target="#bar" @click="initClipboardData()"></i> -->
-                            <el-popover placement="top-start" trigger="hover" popper-class="message-popover">
+                            <img slot="reference" class="jie-icon" id="eqbtn" data-clipboard-action="copy" data-clipboard-target="#bar" @click="initClipboardData()" src="./image/fuzhi.svg" />
+                            <div class="copyRemark-menu" v-if="copyRemark">{{ copyRemark }}</div>
+                            <!-- <el-popover placement="top" trigger="click" popper-class="message-popover">
                                 <span>{{ copyRemark }}</span>
-                                <img slot="reference" class="jie-icon" id="eqbtn" data-clipboard-action="copy" data-clipboard-target="#bar" @click="initClipboardData()" src="./image/fuzhi.svg" />
-                            </el-popover>
+                               
+                            </el-popover> -->
                         </div>
                     </div>
                     <div class="bottom user-no" v-else>
